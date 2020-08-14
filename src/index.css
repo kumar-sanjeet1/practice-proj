@@ -11,3 +11,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.layout {
+    max-width: 70%;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 2px 4px 8px rgb(0 0 0 / 11%);
+}
+
+.App {
+  background: #ddd;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.user {
+  display: flex;
+  flex-shrink: 1;
+}
+
+table td {
+  width: 20%;
+  padding: 5px;
+  margin: 0;
+  border: 1px solid #eee;
+}
+
+.upload-file {
+  padding: 25px;
+}
+
+table thead td {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.users {
+  padding: 20px;
+  border-top: 1px solid gray;
+}
+
+td span {
+  cursor: pointer;
+  color: blue;
+}

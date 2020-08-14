@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { UploadComponent } from './components/upload';
+import { UsersComponent } from './components/users';
+import { Layout } from './components/layout'
+
 
 function App() {
+
+  let [state, setState] = useState([{
+    mobile: '8888888888', 
+    id: 1,
+    earning: 100,
+    action: 'approve'
+}]);
+
+  const  uploadUsers = (users) => {
+    console.log(users)
+    setState(users);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout>
+        <UploadComponent uploadUsers={uploadUsers} />
+        <UsersComponent users={state} />
+      </Layout>
     </div>
   );
 }
